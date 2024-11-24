@@ -1,0 +1,20 @@
+{
+  "name": "dashboard-api",
+  "version": "1.0.0",
+  "description": "API для учебного проекта NodeJS",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/main.js",
+    "build": "tsc"
+  },
+  "author": "Ildar Gataullin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
