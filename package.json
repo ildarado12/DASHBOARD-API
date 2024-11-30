@@ -1,20 +1,38 @@
 {
-  "name": "dashboard-api",
-  "version": "1.0.0",
-  "description": "API для учебного проекта NodeJS",
-  "main": "index.js",
-  "type": "commonjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/main.js",
-    "build": "tsc"
-  },
-  "author": "Ildar Gataullin",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.21.1"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.0"
-  }
+	"name": "dashboard-api",
+	"version": "1.0.0",
+	"description": "API для учебного проекта NodeJS",
+	"main": "index.js",
+	"type": "commonjs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node ./dist/main.js",
+		"build": "tsc",
+		"lint": "eslint ./src/**",
+		"lint:fix": "eslint ./src/** --fix",
+		"dev": "nodemon",
+		"dev:inspect": "nodemon -e ts,json --exec node --inspect=localhost:9222 -r ts-node/register src/main.ts"
+	},
+	"author": "Ildar Gataullin",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.21.1",
+		"inversify": "^6.1.5",
+		"reflect-metadata": "^0.2.2",
+		"tslog": "^3.3.4"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.2.0",
+		"@eslint/js": "^9.16.0",
+		"@types/express": "^5.0.0",
+		"@typescript-eslint/eslint-plugin": "^8.16.0",
+		"@typescript-eslint/parser": "^8.16.0",
+		"eslint": "^9.16.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"nodemon": "^3.1.7",
+		"prettier": "^3.4.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.2"
+	}
 }
