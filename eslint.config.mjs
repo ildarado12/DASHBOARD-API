@@ -34,6 +34,7 @@ export default [
 			'@typescript-eslint/no-unused-vars': 'off',
 			'@typescript-eslint/no-explicit-any': 'off',
 			'@typescript-eslint/explicit-function-return-type': 'warn',
+			'@typescript-eslint/no-empty-object-type': 'off',
 
 			'prettier/prettier': [
 				'error',
