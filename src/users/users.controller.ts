@@ -1,17 +1,17 @@
 import { NextFunction, Request, Response } from 'express';
-import { BaseController } from '../common/base-controller';
-import { HTTPError } from '../errors/http-error-class';
+import { BaseController } from '../common/base.controller';
+import { HTTPError } from '../errors/http.error.class';
 import { inject, injectable } from 'inversify';
 import { TYPES } from '../types';
-import { ILogger } from '../logger/logger-interface';
-import { IUserController } from './users-controller-interface';
-import { UserLoginDto } from './dto/user-login-dto';
-import { UserRegisterDto } from './dto/user-register-dto';
-import { ValidateMiddleware } from '../common/validate-middleware';
+import { ILogger } from '../logger/logger.interface';
+import { IUserController } from './users.controller.interface';
+import { UserLoginDto } from './dto/user.login.dto';
+import { UserRegisterDto } from './dto/user.register.dto';
+import { ValidateMiddleware } from '../common/validate.middleware';
 import { sign } from 'jsonwebtoken';
-import { IConfigService } from '../config/config-service-interface';
-import { IUserService } from './user-service-interface';
-import { AuthGuard } from '../common/auth-guard';
+import { IConfigService } from '../config/config.service.interface';
+import { IUserService } from './user.service.interface';
+import { AuthGuard } from '../common/auth.guard';
 
 @injectable()
 export class UserController extends BaseController implements IUserController {
